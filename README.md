@@ -1,2 +1,2 @@
-# study
-What I did
+# StudyDiary
+A<sup>bout</sup> W<sub>hat</sub> I did.
