@@ -12,7 +12,7 @@
 
 가장자리의 빨간 셀은 약품이 칠해져 있는 셀이다.
 
-![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV599Ik6AH8DFAVl)
+![img](http://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV599Ik6AH8DFAVl)
 **[Fig. 1]**
 
  
@@ -42,7 +42,7 @@ M 시간 동안 이 미생물 군집들을 격리하였다. M시간 후 남아 �
 [Fig. 2]은 최초 군집의 배치를 그림으로 표현한 것이다. 이는 예제 입력 1번과 동일하다. (N = 7, K = 9)
 
 
-![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-UbaAIIDFAVl)
+![img](http://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-UbaAIIDFAVl)
 **[Fig. 2]**
 
 
@@ -58,7 +58,7 @@ G, H 군집도 세로 위치 2, 가로 위치 5에 위치한 셀로 모이게 �
 
  
 
-![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-iS6AIUDFAVl)
+![img](http://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-iS6AIUDFAVl)
 **[Fig. 3]**
 
 
@@ -69,7 +69,7 @@ A, B 그룹은 이동 중 섞이지 않고 각 그룹의 이동 방향으로 움
 
  
 
-![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-wPKAI4DFAVl)
+![img](http://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV59-wPKAI4DFAVl)
 **[Fig. 4]**
 
 
