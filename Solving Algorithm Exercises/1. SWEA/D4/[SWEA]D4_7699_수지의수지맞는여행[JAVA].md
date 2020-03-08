@@ -43,17 +43,77 @@
 
 ## 풀이 방법
 
-- 
-
-
+- 최초 풀이
+  - DFS로 4방 탐색하며 직접 방문한다
+  - 알파벳 26개에 대한 방문 검사 배열을 통해 이미 관람한 명물의 경우 방문하지 않는다
+  - 매 방문마다 관람 명물 갯수를 Max 값과 비교하며 갱신
+    - 답의 최대값이 알파벳 갯수 26이므로, 26 일 경우 종료 조건을 추가했더니 실행시간 대폭 감소
+  - ! 주의 : dfs(num++) 혹은 dfs(++num) 대신 dfs(num + 1)
 
 ## 실행 코드
 
 ```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
+public class Solution_D4_7699_수지의수지맞는여행 {
+
+	static int[] dR = {-1, 1, 0, 0};
+	static int[] dC = {0, 0, -1, 1};
+	static int R, C;
+	static int map[][];
+	static boolean visit[];
+	static int max;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
+		StringBuilder sb = new StringBuilder();
+		int T = Integer.parseInt(br.readLine());
+		for (int t = 1; t <= T; t++) {
+			st = new StringTokenizer(br.readLine());
+			R = Integer.parseInt(st.nextToken());
+			C = Integer.parseInt(st.nextToken());
+			map = new int[R][C];
+			visit = new boolean['Z' - 'A' + 1];
+			max = -1;
+			
+			String input;
+			for (int r = 0; r < R; r++) {
+				input = br.readLine();
+				for (int c = 0; c < C; c++) {
+					map[r][c] = input.charAt(c) - 'A';
+				}
+			}
+			
+			visit[map[0][0]] = true;
+			dfs(0, 0, 1);
+			sb.append('#').append(t).append(' ').append(max).append('\n');
+		}
+		System.out.print(sb.toString());
+	}
+
+	private static void dfs(int r, int c, int num) {
+		if(max >= 26) return;
+		if(max < num) max = num;
+		int nR, nC;
+		for (int k = 0; k < 4; k++) {
+			nR = r + dR[k];
+			nC = c + dC[k];
+			if(nR < 0 || nR >= R || nC < 0 || nC >= C) continue;
+			int next = map[nR][nC];
+			if(visit[next]) continue;
+			visit[next] = true;
+			dfs(nR, nC, num+1);
+			visit[next] = false;
+		}
+	}
+}
 ```
 
-| 메모리 | 실행시간 |
-| ------ | -------- |
-| kb     | ms       |
+| 메모리    | 실행시간 |
+| --------- | -------- |
+| 26,940 kb | 130 ms   |
 
